@@ -83,9 +83,20 @@ function rps(player1, player2) {
 console.log(rps("rock", "paper"));
 /** END OF QUESTION 3**/
 
-/** QUESTION 6 - HOISTING **/
-/**Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope
+/** QUESTION 4 - WORDS TO MARKS **/
+function wordsToMarks(string) {
+  let sum = 0;
+  for (let i in string) {
+    sum += string.toLowerCase().charCodeAt(i) - 96;
+  }
+  return sum;
+}
 
+console.log(wordsToMarks("friendship"));
+/** END OF QUESTION 4**/
+
+/** QUESTION 6 - HOISTING **/
+// Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope
 /**Example of Hoisting **/
 x = 5;
 var x;
